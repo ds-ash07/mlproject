@@ -23,7 +23,7 @@ from src.utils import save_object, evaluate_models
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path = os.path.join("artifacts", "model.pkl")
+    trained_model_file_path = os.path.join("artifact", "model.pkl")
 
 
 class ModelTrainer:
@@ -77,7 +77,7 @@ class ModelTrainer:
                     'learning_rate': [0.1, 0.01, 0.5, 0.001],
                     'n_estimators': [8, 16, 32, 64, 128, 256]
                 },
-                "KNeighborsRegressor": {  # Corrected Key
+                "KNeighborsRegressor": {
                     'n_neighbors': [3, 5, 7, 9],
                     'weights': ['uniform', 'distance']
     }
